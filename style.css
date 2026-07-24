@@ -155,6 +155,13 @@ hr {
     flex: 1; 
     width: 100%;
 }
+/* PENTING: elemen grid secara default punya "min-width: auto" tersembunyi yang
+   bikin dia menolak mengecil kalau isinya (gambar/teks) lebih lebar dari kolom.
+   min-width: 0 di sini maksa semua kotak grid beneran nurut ukuran kolom yang
+   sudah ditentukan, jadi gak ada lagi yang nyembul/kepotong di HP. */
+.layout-container > * {
+    min-width: 0;
+}
 
 /* BAGIAN KIRI & KANAN (STICKY: ikut scroll & selalu sejajar dgn konten tengah) */
 .sidebar {
