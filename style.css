@@ -1,4 +1,4 @@
-/* --- Variabel Warna untuk Konsistensi Tema --- */
+
 :root {
     --bg-main: #FFF7FA;
     --pink-light: #FDE2E4;
@@ -9,7 +9,6 @@
     --sidebar-bg: #FDEBF2;
 }
 
-/* --- Reset & Font Dasar --- */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* Jangan taruh overflow-x: hidden di sini agar scroll browser tidak terkunci */
+    
 }
 
 body {
@@ -29,13 +28,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* PERBAIKAN: Mencegah halaman menjorok ke kanan hanya diterapkan di body */
     overflow-x: hidden; 
     width: 100%;
 }
 
 .section-center {
-    /* biar judul section tidak ketutup navbar sticky saat loncat dari link menu */
     scroll-margin-top: 90px;
 }
 
@@ -54,14 +51,13 @@ hr {
     opacity: 0.3;
 }
 
-/* --- Marquee Banner --- */
+
 .marquee-container {
     background-color: #F7CAD0;
     color: var(--text-dark);
     padding: 10px 0;
     overflow: hidden;
     white-space: nowrap;
-    /* PERBAIKAN: Memastikan banner pas 100% layar */
     width: 100%;
     box-sizing: border-box;
 }
@@ -75,7 +71,7 @@ hr {
     100% { transform: translateX(-100%); }
 }
 
-/* --- Hero Section --- */
+
 .hero {
     background-image: url('https://xmple.com/wallpaper/polka-dots-spots-brown-pink-2048x1152-c2-bc8f8f-ffc0cb-l2-41-117-a-60-f-3.svg');
     background-size: cover;
@@ -92,7 +88,6 @@ hr {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* PERBAIKAN: Agar kotak tulisan di tengah tidak melebihi layar HP */
     width: 90%; 
     max-width: 600px;
 }
@@ -101,7 +96,6 @@ hr {
     margin-bottom: 5px;
 }
 
-/* --- Sticky Navbar --- */
 .navbar {
     background-color: var(--pink-light);
     display: flex;
@@ -113,7 +107,6 @@ hr {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     padding: 15px 25px;
-    /* PERBAIKAN: Memastikan navbar tidak melebar ke kanan */
     width: 100%;
     box-sizing: border-box;
 }
@@ -143,7 +136,6 @@ hr {
     color: var(--pink-dark);
 }
 
-/* --- Layout Responsif (CSS Grid) --- */
 .layout-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -153,36 +145,31 @@ hr {
     padding: 0 15px;
     align-items: start;
     flex: 1; 
-    /* PERBAIKAN: Memastikan layout tidak melewati batas layar */
     width: 100%;
     box-sizing: border-box;
 }
 
-/* BAGIAN KIRI & KANAN (STICKY: ikut scroll) */
 .sidebar {
     background-color: var(--sidebar-bg);
     padding: 20px;
     border-radius: 10px;
     position: sticky;
-    top: 85px; /* beri jarak di bawah navbar sticky */
+    top: 85px; 
     align-self: start;
     max-height: calc(100vh - 105px);
     overflow-y: auto;
 }
 
-/* BAGIAN TENGAH (mengalir natural) */
 .main-content {
     background-color: var(--white);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-    /* PERBAIKAN: Tinggi pas mengikuti isi teks/gambar (tidak molor) & menggunakan scroll browser */
     height: fit-content; 
     width: 100%;
     box-sizing: border-box;
 }
 
-/* --- Styling Isi Sidebar (Kiri & Kanan) --- */
 .sidebar h2 {
     font-size: 1.5rem;
     margin-bottom: 5px;
@@ -251,7 +238,6 @@ hr {
 .review-box { text-align: left; margin-bottom: 10px; }
 .review-box .stars { font-size: 0.8rem; margin-bottom: 3px; }
 
-/* --- Produk Grid --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -282,7 +268,6 @@ hr {
 .card-actions { display: flex; gap: 8px; margin-top: 10px; }
 .card-actions .btn { flex: 1; font-size: 0.8rem; padding: 8px 6px; }
 
-/* --- Tombol Wishlist (hati) --- */
 .wishlist-btn { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 50%; border: none; background-color: rgba(255,255,255,0.9); color: var(--pink-dark); font-size: 1.2rem; line-height: 1; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: transform 0.2s, background-color 0.2s; z-index: 5; }
 .wishlist-btn:hover { transform: scale(1.1); }
 .wishlist-btn.active { background-color: var(--pink-dark); color: #fff; }
@@ -290,7 +275,6 @@ hr {
 .wishlist-btn-detail.active { background-color: var(--pink-dark); color: #fff; }
 .empty-state { text-align: center; color: var(--text-muted); font-size: 0.95rem; padding: 20px; }
 
-/* --- Ringkasan Keranjang --- */
 .cart-summary { margin-bottom: 25px; }
 .cart-item { display: flex; align-items: center; gap: 12px; background-color: #fff; border: 1px solid var(--pink-light); border-radius: 10px; padding: 10px; margin-bottom: 10px; }
 .cart-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
@@ -310,7 +294,6 @@ hr {
 .btn:hover { background-color: #c77b8f; }
 .btn-outline { background-color: transparent; color: var(--pink-dark); border: 1px solid var(--pink-dark); }
 
-/* --- Form Pesanan --- */
 .order-form {
     max-width: 600px;
     width: 100%;
@@ -336,21 +319,19 @@ legend { color: var(--pink-dark); font-weight: bold; font-size: 1.2rem; padding:
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    /* PERBAIKAN: Form sering memaksa layar melebar, ini wajib 100% */
     width: 100%;
     box-sizing: border-box;
 }
 .radio-group { flex-direction: row; flex-wrap: wrap; gap: 15px; align-items: center; }
 .form-actions { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
 
-/* --- Kontak & Footer --- */
 .profile-img { width: 180px; border-radius: 10px; border: 3px solid var(--pink-dark); display: block; margin: 0 auto 20px; }
 .contact-table {
     margin: 0 auto;
     text-align: left;
     width: 100%;
     max-width: 100%;
-    word-break: break-word; /* Mencegah email/teks panjang mendorong layar */
+    word-break: break-word; 
 }
 .contact-table th, .contact-table td { padding: 8px 15px; }
 .greeting-text { text-align: center; margin-top: 20px; color: var(--pink-dark); font-weight: 600; }
@@ -362,13 +343,11 @@ footer {
     padding: 20px;
     margin-top: 40px;
     font-weight: 600;
-    /* PERBAIKAN: Memastikan footer tidak kebesaran/menabrak layar */
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-/* --- Halaman Detail Produk --- */
 .detail-container { max-width: 900px; margin: 40px auto; padding: 0 15px; width: 100%; box-sizing: border-box; }
 .page-title { font-size: 2.5rem; margin-bottom: 40px; }
 .detail-card { display: flex; background-color: var(--white); border: 2px solid var(--pink-light); border-radius: 12px; margin-bottom: 30px; padding: 20px; gap: 30px; box-shadow: 0 4px 15px rgba(217,143,163,0.1); align-items: center; scroll-margin-top: 80px; }
@@ -382,7 +361,6 @@ footer {
 .order-action { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; }
 .order-action input[type="number"] { width: 80px; padding: 8px; border: 1px solid var(--pink-dark); border-radius: 5px; font-family: 'Poppins', sans-serif; color: var(--text-dark); outline: none; }
 
-/* --- POPUP INVOICE (MODAL) --- */
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center; }
 .modal-content { background-color: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 450px; max-height: 90vh; display: flex; flex-direction: column; border: 3px solid var(--pink-dark); position: relative; box-shadow: 0 5px 20px rgba(0,0,0,0.2); animation: fadeIn 0.3s; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -392,13 +370,11 @@ footer {
 .invoice-details strong, .invoice-items-scroll strong { color: var(--text-dark); }
 .invoice-items-scroll { overflow-y: auto; flex: 1; min-height: 0; max-height: 55vh; padding-right: 5px; }
 
-/* --- Custom Scrollbar Tema Pink --- */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--pink-light); border-radius: 10px; }
 ::-webkit-scrollbar-thumb { background: var(--pink-dark); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #c77b8f; }
 
-/* --- MEDIA QUERIES (Untuk Tampilan Android / Mobile) --- */
 @media (max-width: 768px) {
     .layout-container {
         grid-template-columns: 1fr;
@@ -434,7 +410,7 @@ footer {
         background-color: var(--pink-light);
         padding: 15px 0 20px;
         box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-        box-sizing: border-box; /* PERBAIKAN: Mencegah dropdown nav meluber */
+        box-sizing: border-box; 
     }
 
     .nav-links.open { display: flex; }
@@ -443,7 +419,7 @@ footer {
     
     .main-content { 
         order: 1; 
-        padding: 20px 15px; /* sedikit perkecil padding konten di HP */
+        padding: 20px 15px; 
     } 
     
     .sidebar.right-sidebar { order: 3; }
@@ -454,7 +430,6 @@ footer {
     .detail-card img { width: 100%; max-width: 300px; height: auto; }
     .detail-info h2 { text-align: center; font-size: 1.5rem; }
 
-    /* Ringkasan keranjang: susun ulang jadi grid 2 baris biar rapi di HP */
     .cart-item {
         display: grid;
         grid-template-columns: 55px 1fr auto;
