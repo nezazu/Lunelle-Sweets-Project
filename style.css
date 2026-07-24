@@ -17,18 +17,9 @@
 }
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: visible;
-    width: 100%;
-}
-img {
-    max-width: 100%;
-    height: auto;
 }
 body {
-    overflow-x: hidden;
-    overflow-y: visible;
-    max-width: 100vw;
+    
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-dark);
@@ -61,7 +52,7 @@ hr {
 .marquee-container {
     background-color: #F7CAD0;
     color: var(--text-dark);
-    padding: clamp(8px, 2vw, 12px) 0;
+    padding: 10px 0;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -69,40 +60,32 @@ hr {
     display: inline-block;
     animation: scroll-left 15s linear infinite;
     font-weight: 600;
-    font-size: clamp(0.8rem, 2.2vw, 1rem);
 }
 @keyframes scroll-left {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
 }
 
-/* --- Hero Section ---
-   height & ukuran teks pakai clamp(minimum, ukuran-relatif-layar, maksimum)
-   jadi banner ini otomatis membesar/mengecil proporsional mengikuti tinggi/lebar layar,
-   gak cuma "patah" tiba-tiba di satu titik breakpoint doang */
+/* --- Hero Section --- */
 .hero {
     background-image: url('https://xmple.com/wallpaper/polka-dots-spots-brown-pink-2048x1152-c2-bc8f8f-ffc0cb-l2-41-117-a-60-f-3.svg');
     background-size: cover;
     background-position: center;
-    height: clamp(200px, 32vh, 320px);
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .hero-overlay {
     background-color: rgba(255,245,248, 0.85);
-    padding: clamp(20px, 5vw, 40px);
+    padding: 40px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    max-width: 90vw;
 }
 .hero-overlay h1 {
-    font-size: clamp(1.7rem, 6vw, 3rem);
+    font-size: 3rem;
     margin-bottom: 5px;
-}
-.hero-overlay p {
-    font-size: clamp(0.85rem, 2.5vw, 1rem);
 }
 
 /* --- Sticky Navbar --- */
@@ -111,16 +94,17 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(10px, 3vw, 20px);
+    gap: 20px;
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    padding: clamp(10px, 2.5vw, 15px) clamp(15px, 4vw, 25px);
+    padding: 15px 25px;
 }
 .nav-links {
     display: flex;
-    gap: clamp(10px, 3vw, 20px);
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -138,7 +122,6 @@ hr {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: clamp(0.85rem, 2vw, 1rem);
     transition: color 0.3s;
 }
 .navbar a:hover {
@@ -156,13 +139,6 @@ hr {
     align-items: start;
     flex: 1; 
     width: 100%;
-}
-/* PENTING: elemen grid secara default punya "min-width: auto" tersembunyi yang
-   bikin dia menolak mengecil kalau isinya (gambar/teks) lebih lebar dari kolom.
-   min-width: 0 di sini maksa semua kotak grid beneran nurut ukuran kolom yang
-   sudah ditentukan, jadi gak ada lagi yang nyembul/kepotong di HP. */
-.layout-container > * {
-    min-width: 0;
 }
 
 /* BAGIAN KIRI & KANAN (STICKY: ikut scroll & selalu sejajar dgn konten tengah) */
@@ -554,10 +530,9 @@ footer {
     background-color: #F7CAD0;
     color: var(--text-dark);
     text-align: center;
-    padding: clamp(15px, 4vw, 20px);
+    padding: 20px;
     margin-top: 40px;
     font-weight: 600;
-    font-size: clamp(0.85rem, 2.2vw, 1rem);
     width: 100%;
 }
 
@@ -761,6 +736,10 @@ footer {
 
     .sidebar.right-sidebar {
         order: 3;
+    }
+    
+    .hero-overlay h1 {
+        font-size: 2rem;
     }
 
     .detail-card {
