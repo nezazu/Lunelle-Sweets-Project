@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunelle Sweets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-container">
+        <div class="marquee-text">
+            ♡ Welcome to Lunelle Sweets ♡ Sweet Dessert • Cute Cakes • Fresh Everyday ♡
+        </div>
+    </div>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Lunelle Sweets</h1>
+            <p>Sweetness in Every Bite♡</p>
+        </div>
+    </header>
+
+    <!-- Sticky Navigation Menu -->
+    <nav class="navbar">
+        <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+        <div class="nav-links">
+            <a href="#produk">Produk</a>
+            <a href="detail.html">Detail Produk</a>
+            <a href="#wishlist">♡ Wishlist<span id="wishlistCount" class="nav-badge">0</span></a>
+            <a href="#transaksi">🛒 Keranjang<span id="cartCount" class="nav-badge">0</span></a>
+            <a href="#kontak">Kontak Kami</a>
+            <a href="#tentang">Tentang Kami</a>
+        </div>
+    </nav>
+
+    <!-- Main Layout Container -->
+    <div class="layout-container">
+        
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar left-sidebar">
+            <h2>Our Menu♡</h2>
+            <hr>
+            <ul class="menu-list">
+                <li>⭐ Tiramisu</li>
+                <li>⭐ Cheesecake</li>
+                <li>Brownies</li>
+                <li>Panna Cotta</li>
+                <li>Macaron</li>
+                <li>⭐ Croffle</li>
+                <li>Mille Crepe</li>
+                <li>Pudding</li>
+                <li>⭐ Blueberry Cheesecake</li>
+                <li>Donut</li>
+                <li>Cupcake</li>
+                <li>⭐ Dubai Chewy Cookie</li>
+                <li>Fruit Sandwich</li>
+                <li>Choco Cake</li>
+                <li>⭐ Fraisier</li>
+            </ul>
+            <hr>
+            <p class="note" style="font-size: 0.85rem;">⭐ = Recommended Menu</p>
+            
+            <br>
+            <!-- Tambahan: Jam Operasional -->
+            <div class="sidebar-box">
+                <h3>Jam Operasional 🕰️</h3>
+                <p><b>Senin - Jumat:</b><br> 09.00 - 20.00 WIB</p>
+                <p><b>Sabtu - Minggu:</b><br> 08.00 - 21.00 WIB</p>
+                <p id="statusToko" class="status-badge"></p>
+            </div>
+
+            <!-- Tambahan: Available On -->
+            <div class="sidebar-box">
+                <h3>Available On 🛵</h3>
+                <p style="font-weight: 600; color: #D98FA3;">GoFood • GrabFood • ShopeeFood</p>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT (TENGAH) -->
+        <main class="main-content">
+            
+            <section id="tentang" class="section-center">
+                <h2>Welcome to Lunelle Sweets ♡</h2>
+                <p class="subtitle" align="center">Sweetness in Every Bite</p>
+                <br>
+                <p align="center">Lunelle Sweets adalah dessert shop yang hadir untuk menemani harimu, dengan berbagai dessert premium yang aesthetic, manis, dan elegan♡</p>
+                <br>
+                <p align="center">Kami menyediakan berbagai pilihan dessert seperti tiramisu, cheesecake, mille crepe, panna cotta, croffle, cupcake, hingga dessert premium lainnya yang dibuat fresh setiap hari.</p>
+                <br>
+                <h3 class="heading-pink">Our Vision</h3>
+                <hr>
+                <p align="center">Menjadi dessert shop favorit dengan konsep menggemaskan dengan kualitas premium yang memberikan kebahagiaan di setiap gigitan♡</p>
+                <br>
+                <h3 class="heading-pink">Our Mission</h3>
+                <hr>
+                <ul class="mission-list">
+                    <li>♡ Menyediakan dessert berkualitas premium</li>
+                    <li>♡ Menghadirkan tampilan dessert yang aesthetic dan menarik</li>
+                    <li>♡ Memberikan pelayanan terbaik kepada pelanggan</li>
+                    <li>♡ Menjaga kualitas dan kebersihan produk setiap hari</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section id="produk" class="section-center">
+                <h2>Produk Kami</h2>
+                <div class="product-grid">
+                    <!-- 15 Produk Lengkap -->
+                    <div class="card" data-produk="Tiramisu">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/03/1b/fc/031bfca19145b2ea6e0dd0e6ac382f8a.jpg" alt="Tiramisu">
+                        <h4>Tiramisu</h4>
+                        <p class="price">Rp. 45.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#tiramisu" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Cheesecake">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/66/86/fe/6686fe10137634c921aea8470336b5b9.jpg" alt="Cheesecake">
+                        <h4>Cheesecake</h4>
+                        <p class="price">Rp. 50.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#cheesecake" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Brownies">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/ed/df/a5/eddfa507bf14f092f44634873e8c9dbb.jpg" alt="Brownies">
+                        <h4>Brownies</h4>
+                        <p class="price">Rp. 38.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#brownies" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Panna Cotta">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/236x/e9/f6/47/e9f647b94d80266c25e1f25b68e4f917.jpg" alt="Panna Cotta">
+                        <h4>Panna Cotta</h4>
+                        <p class="price">Rp. 40.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#pannacotta" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Macaron">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/b8/8a/40/b88a40d15763d3f7a595ea23768fe7cc.jpg" alt="Macaron">
+                        <h4>Macaron</h4>
+                        <p class="price">Rp. 60.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#macaron" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Croffle">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/99/f6/29/99f6291f9e7668cf74046669e1ad54f5.jpg" alt="Croffle">
+                        <h4>Croffle</h4>
+                        <p class="price">Rp. 35.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#croffle" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-produk="Mille Crepe">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/webp85/1200x/e8/85/ac/e885acc6f8ac36b09e8cc61be28b57c9.webp" alt="Mille Crepe">
+                        <h4>Mille Crepe</h4>
+                        <p class="price">Rp. 28.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#millecrepe" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Pudding">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/webp85/736x/f4/f9/aa/f4f9aab5221be79286ebf968681b3fa2.webp" alt="Pudding">
+                        <h4>Pudding</h4>
+                        <p class="price">Rp. 32.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#pudding" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Blueberry Cheesecake">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/72/da/5c/72da5cab4943eea87468251a4e6f9529.jpg" alt="Blueberry Cheesecake">
+                        <h4>Blueberry Cheesecake</h4>
+                        <p class="price">Rp. 65.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#blueberrycheesecake" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-produk="Donut">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/webp85/736x/85/83/48/858348c3fcd6c7fb6381c02f9c702b1e.webp" alt="Donut">
+                        <h4>Donut</h4>
+                        <p class="price">Rp. 58.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#donut" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Cupcake">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/2c/80/62/2c80620f21c6bade1ec86c6f7262be50.jpg" alt="Cupcake">
+                        <h4>Cupcake</h4>
+                        <p class="price">Rp. 47.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#cupcake" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Dubai Chewy Cookie">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/49/c5/82/49c582e05f873311812641625e0c3fe9.jpg" alt="Dubai Chewy Cookie">
+                        <h4>Dubai Chewy Cookie</h4>
+                        <p class="price">Rp. 55.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#dubaichewy" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-produk="Fruit Sandwich">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/736x/ca/d5/8c/cad58c939f08e07643421272b6a081ae.jpg" alt="Fruit Sandwich">
+                        <h4>Fruit Sandwich</h4>
+                        <p class="price">Rp. 35.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#fruitsandwich" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Choco Cake">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/webp85/1200x/5e/10/38/5e10383b6d28536bd27db895e693efdc.webp" alt="Choco Cake">
+                        <h4>Choco Cake</h4>
+                        <p class="price">Rp. 60.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#chococake" class="btn">Detail</a>
+                        </div>
+                    </div>
+                    <div class="card" data-produk="Fraisier">
+                        <button class="wishlist-btn" type="button" title="Tambah ke Wishlist" aria-label="Tambah ke Wishlist">♡</button>
+                        <img src="https://i.pinimg.com/webp85/1200x/d8/5d/19/d85d195719b4c0cca08f8024c2410511.webp" alt="Fraisier">
+                        <h4>Fraisier</h4>
+                        <p class="price">Rp. 63.000</p>
+                        <div class="card-actions">
+                            <button class="btn btn-outline cart-btn" type="button">🛒 Keranjang</button>
+                            <a href="detail.html#fraisier" class="btn">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="wishlist" class="section-center">
+                <h2>Wishlist Saya ♡</h2>
+                <p style="text-align:center; color: var(--text-muted); margin-bottom: 10px;">Produk favorit yang kamu simpan buat dipesan nanti</p>
+                <div id="wishlistContainer" class="product-grid"></div>
+            </section>
+
+            <hr>
+
+            <section id="transaksi" class="section-center">
+                <h2>Order Sekarang ♡</h2>
+
+                <div class="cart-summary">
+                    <h3 class="heading-pink" style="text-align:left; font-size:1.2rem;">🛒 Keranjang Kamu</h3>
+                    <div id="cartItemsContainer"></div>
+                    <p id="cartEmptyMsg" class="empty-state" style="display:none;">Keranjang masih kosong. Yuk pilih dessert favoritmu dulu di bagian <a href="#produk">Produk Kami</a> ♡</p>
+                    <div class="cart-total-row">
+                        <span>Total Belanja:</span>
+                        <span id="cartGrandTotal">Rp 0</span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <form id="orderForm" class="order-form">
+                    <fieldset>
+                        <legend>Data Pemesan</legend>
+                        <div class="form-group">
+                            <label>Nama Pembeli</label>
+                            <input type="text" id="inputNama" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nomor Telepon</label>
+                            <input type="tel" id="inputTelp" required
+                                   pattern="^(\+62|62|0)8[0-9]{8,12}$"
+                                   placeholder="08xxxxxxxxxx"
+                                   title="Masukkan nomor HP Indonesia yang valid, contoh: 08123456789">
+                        </div>
+                        <div class="form-group radio-group">
+                            <label>Metode Pembayaran:</label>
+                            <label><input type="radio" name="bayar" value="Cash" required> Cash</label>
+                            <label><input type="radio" name="bayar" value="QRIS" required> QRIS</label>
+                            <label><input type="radio" name="bayar" value="Transfer Bank" required> Transfer Bank</label>
+                            <label><input type="radio" name="bayar" value="E-Wallet" required> E-Wallet</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat Pengiriman</label>
+                            <textarea id="inputAlamat" rows="4" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn" id="checkoutBtn">Checkout Sekarang</button>
+                            <button type="reset" class="btn btn-outline">Reset</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <hr>
+
+            <section id="kontak" class="section-center">
+                <h2>Temukan Kami di Sini♡</h2>
+                <img src="https://i.imgur.com/f0RKvAg.jpeg" alt="Owner" class="profile-img">
+                <table class="contact-table">
+                    <tr><th>Nama</th><td>: Nezda Aulia Putri</td></tr>
+                    <tr><th>NIM</th><td>: 10525020</td></tr>
+                    <tr><th>Kelas</th><td>: IS-1</td></tr>
+                    <tr><th>Email</th><td>: aulianezda@gmail.com</td></tr>
+                    <tr><th>Instagram</th><td>: <a href="https://instagram.com/nzdaul">@nzdaul</a></td></tr>
+                    <tr><th>Website</th><td>: www.lunellesweets.com</td></tr>
+                    <tr><th>No Telepon</th><td>: 0831-7579-6918</td></tr>
+                </table>
+                <p class="greeting-text">Terima kasih telah mengunjungi Lunelle Sweets♡<br>Selamat menikmati makanan manis yang membahagiakan♡</p>
+            </section>
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="sidebar right-sidebar">
+            <h2>Best Seller♡</h2>
+            <hr>
+            <ul class="menu-list">
+                <li>⭐ Strawberry Cheesecake</li>
+                <li>⭐ Lotus Croffle</li>
+                <li>⭐ Dubai Chewy Cookie</li>
+                <li>⭐ Tiramisu</li>
+            </ul>
+            <div class="best-seller-imgs">
+                <img src="https://i.pinimg.com/736x/91/c7/32/91c732154ff948e08e4cc8e027f6942c.jpg" alt="Best Seller 1">
+                <img src="https://i.pinimg.com/736x/bd/28/76/bd2876691c813fe9086e41af558abc25.jpg" alt="Best Seller 2">
+            </div>
+
+            <br>
+            <!-- Tambahan: Quote Box -->
+            <div class="sidebar-box quote-box">
+                <p>"A balanced diet is a cookie in each hand." 🍪✨</p>
+            </div>
+
+            <!-- Tambahan: Testimoni -->
+            <div class="sidebar-box">
+                <h3>Testimoni ♡</h3>
+                <div class="review-box">
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <p>"I love the Tiramisu & Cheesecake, my two favorite!!" <br><b>- Nadin</b></p>
+                </div>
+                <hr style="margin: 10px 0; opacity: 0.1;">
+                <div class="review-box">
+                    <p class="stars">⭐⭐⭐⭐⭐</p>
+                    <p>"Dubai Chewy Cookie-nya enak BANGET! Manisnya pas dan packagingnya cantik." <br><b>- Tasya</b></p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Lunelle Sweets • All Rights Reserved♡</p>
+    </footer>
+
+    <!-- INVOICE POPUP (MODAL) -->
+    <div id="invoiceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="heading-pink">Invoice Pesanan</h2>
+            <hr>
+            <div class="invoice-details">
+                <p><strong>Nama Pemesan:</strong> <span id="invNama"></span></p>
+                <p><strong>Nomor Telepon:</strong> <span id="invTelp"></span></p>
+                <p><strong>Alamat Pengiriman:</strong> <span id="invAlamat"></span></p>
+                <p><strong>Metode Pembayaran:</strong> <span id="invBayar"></span></p>
+            </div>
+            <hr>
+            <div id="invItemsList" class="invoice-items-scroll"></div>
+            <hr>
+            <h3 style="color: var(--pink-dark); text-align: right; font-size: 1.5rem;">Total: <span id="invTotal"></span></h3>
+            <button id="confirmOrderBtn" class="btn" style="width: 100%; margin-top: 20px; font-size: 1.1rem;">Konfirmasi & Selesai</button>
+        </div>
+    </div>
+
+    <script>
+        // ============ HELPER: format & parsing ============
+        const formatRupiah = (angka) => {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(angka);
+        };
+        const parseHarga = (teks) => parseInt(teks.replace(/[^0-9]/g, ''), 10) || 0;
+
+        // ============ HELPER: localStorage Keranjang & Wishlist ============
+        // Catatan: data disimpan per-browser lewat localStorage, jadi tetap
+        // tersambung antara index.html & detail.html selama dibuka di domain/server yang sama.
+        const getCart = () => JSON.parse(localStorage.getItem('lunelle_cart') || '[]');
+        const saveCart = (cart) => localStorage.setItem('lunelle_cart', JSON.stringify(cart));
+        const getWishlist = () => JSON.parse(localStorage.getItem('lunelle_wishlist') || '[]');
+        const saveWishlist = (list) => localStorage.setItem('lunelle_wishlist', JSON.stringify(list));
+
+        function addToCart(item, jumlah) {
+            const cart = getCart();
+            const existing = cart.find(i => i.produk === item.produk);
+            if (existing) {
+                existing.jumlah += jumlah;
+            } else {
+                cart.push({ ...item, jumlah });
+            }
+            saveCart(cart);
+            renderCart();
+        }
+
+        function changeCartQty(produk, delta) {
+            const cart = getCart();
+            const item = cart.find(i => i.produk === produk);
+            if (!item) return;
+            item.jumlah += delta;
+            const newCart = item.jumlah < 1 ? cart.filter(i => i.produk !== produk) : cart;
+            saveCart(newCart);
+            renderCart();
+        }
+
+        function removeFromCart(produk) {
+            saveCart(getCart().filter(i => i.produk !== produk));
+            renderCart();
+        }
+
+        function toggleWishlist(item) {
+            const list = getWishlist();
+            const idx = list.findIndex(i => i.produk === item.produk);
+            if (idx >= 0) {
+                list.splice(idx, 1);
+            } else {
+                list.push(item);
+            }
+            saveWishlist(list);
+            renderWishlist();
+            syncWishlistButtons();
+        }
+
+        function removeFromWishlist(produk) {
+            saveWishlist(getWishlist().filter(i => i.produk !== produk));
+            renderWishlist();
+            syncWishlistButtons();
+        }
+
+        // ============ RENDER: Keranjang ============
+        function renderCart() {
+            const cart = getCart();
+            const container = document.getElementById('cartItemsContainer');
+            const emptyMsg = document.getElementById('cartEmptyMsg');
+            const totalEl = document.getElementById('cartGrandTotal');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (!container) return;
+
+            if (cart.length === 0) {
+                container.innerHTML = '';
+                if (emptyMsg) emptyMsg.style.display = 'block';
+                if (checkoutBtn) checkoutBtn.disabled = true;
+            } else {
+                if (emptyMsg) emptyMsg.style.display = 'none';
+                if (checkoutBtn) checkoutBtn.disabled = false;
+                container.innerHTML = cart.map(item => `
+                    <div class="cart-item" data-produk="${item.produk}">
+                        <img src="${item.gambar}" alt="${item.produk}">
+                        <div class="cart-item-info">
+                            <h4>${item.produk}</h4>
+                            <div class="cart-item-price">${formatRupiah(item.harga)} / pcs</div>
+                        </div>
+                        <div class="qty-control">
+                            <button type="button" class="qty-minus">−</button>
+                            <span>${item.jumlah}</span>
+                            <button type="button" class="qty-plus">+</button>
+                        </div>
+                        <div class="cart-item-subtotal">${formatRupiah(item.harga * item.jumlah)}</div>
+                        <button type="button" class="remove-cart-item" title="Hapus dari keranjang">✕</button>
+                    </div>
+                `).join('');
+            }
+
+            const grandTotal = cart.reduce((sum, i) => sum + i.harga * i.jumlah, 0);
+            if (totalEl) totalEl.textContent = formatRupiah(grandTotal);
+
+            const cartCountEl = document.getElementById('cartCount');
+            if (cartCountEl) cartCountEl.textContent = cart.reduce((sum, i) => sum + i.jumlah, 0);
+        }
+
+        // ============ RENDER: Wishlist ============
+        function renderWishlist() {
+            const list = getWishlist();
+            const container = document.getElementById('wishlistContainer');
+            if (container) {
+                container.innerHTML = list.length === 0
+                    ? '<p class="empty-state">Wishlist kamu masih kosong. Klik ikon ♡ di produk favoritmu ya!</p>'
+                    : list.map(item => `
+                        <div class="card" data-produk="${item.produk}">
+                            <img src="${item.gambar}" alt="${item.produk}">
+                            <h4>${item.produk}</h4>
+                            <p class="price">${formatRupiah(item.harga)}</p>
+                            <div class="card-actions">
+                                <button type="button" class="btn btn-outline wishlist-add-cart">🛒 Keranjang</button>
+                                <button type="button" class="btn remove-wishlist-item">✕ Hapus</button>
+                            </div>
+                        </div>
+                    `).join('');
+            }
+
+            const wishlistCountEl = document.getElementById('wishlistCount');
+            if (wishlistCountEl) wishlistCountEl.textContent = list.length;
+        }
+
+        // Samakan tampilan tombol hati (♡/♥) di semua kartu produk sesuai isi wishlist
+        function syncWishlistButtons() {
+            const list = getWishlist();
+            document.querySelectorAll('.card[data-produk], .detail-card').forEach(card => {
+                const produk = card.dataset.produk || (card.querySelector('h2') && card.querySelector('h2').textContent.trim());
+                if (!produk) return;
+                const isSaved = list.some(i => i.produk === produk);
+                const btn = card.querySelector('.wishlist-btn');
+                if (!btn) return;
+                btn.classList.toggle('active', isSaved);
+                if (btn.classList.contains('wishlist-btn-detail')) {
+                    btn.textContent = isSaved ? '♥ Tersimpan di Wishlist' : '♡ Tambah ke Wishlist';
+                } else {
+                    btn.textContent = isSaved ? '♥' : '♡';
+                }
+            });
+        }
+
+        // ============ EVENT: Tombol Keranjang & Wishlist di grid produk (index.html) ============
+        document.querySelectorAll('.product-grid .card[data-produk]').forEach(card => {
+            const cartBtn = card.querySelector('.cart-btn');
+            const wishBtn = card.querySelector('.wishlist-btn');
+            const getInfo = () => ({
+                produk: card.dataset.produk,
+                harga: parseHarga(card.querySelector('.price').textContent),
+                gambar: card.querySelector('img').src
+            });
+
+            if (cartBtn) {
+                cartBtn.addEventListener('click', () => {
+                    addToCart(getInfo(), 1);
+                    cartBtn.textContent = '✓ Ditambahkan';
+                    setTimeout(() => { cartBtn.textContent = '🛒 Keranjang'; }, 1200);
+                });
+            }
+            if (wishBtn) {
+                wishBtn.addEventListener('click', () => toggleWishlist(getInfo()));
+            }
+        });
+
+        // ============ EVENT: klik di dalam ringkasan Keranjang (form order) ============
+        const cartItemsContainer = document.getElementById('cartItemsContainer');
+        if (cartItemsContainer) {
+            cartItemsContainer.addEventListener('click', (e) => {
+                const row = e.target.closest('.cart-item');
+                if (!row) return;
+                const produk = row.dataset.produk;
+                if (e.target.classList.contains('qty-plus')) changeCartQty(produk, 1);
+                if (e.target.classList.contains('qty-minus')) changeCartQty(produk, -1);
+                if (e.target.classList.contains('remove-cart-item')) removeFromCart(produk);
+            });
+        }
+
+        // ============ EVENT: klik di dalam Wishlist ============
+        const wishlistContainer = document.getElementById('wishlistContainer');
+        if (wishlistContainer) {
+            wishlistContainer.addEventListener('click', (e) => {
+                const card = e.target.closest('.card[data-produk]');
+                if (!card) return;
+                const produk = card.dataset.produk;
+                if (e.target.classList.contains('remove-wishlist-item')) {
+                    removeFromWishlist(produk);
+                }
+                if (e.target.classList.contains('wishlist-add-cart')) {
+                    const item = getWishlist().find(i => i.produk === produk);
+                    if (item) {
+                        addToCart(item, 1);
+                        e.target.textContent = '✓ Ditambahkan';
+                        setTimeout(() => { e.target.textContent = '🛒 Keranjang'; }, 1200);
+                    }
+                }
+            });
+        }
+
+        // --- Hamburger menu (mobile) ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+            // Tutup menu otomatis begitu salah satu link diklik
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // --- Status Buka / Tutup Toko (real-time) ---
+        function cekStatusToko() {
+            const statusEl = document.getElementById('statusToko');
+            if (!statusEl) return;
+
+            const now = new Date();
+            const hari = now.getDay(); // 0 = Minggu, 6 = Sabtu
+            const jamDesimal = now.getHours() + now.getMinutes() / 60;
+
+            const isWeekend = (hari === 0 || hari === 6);
+            const jamBuka = isWeekend ? 8 : 9;
+            const jamTutup = isWeekend ? 21 : 20;
+            const buka = jamDesimal >= jamBuka && jamDesimal < jamTutup;
+
+            statusEl.textContent = buka ? '🟢 Buka Sekarang' : '🔴 Tutup Sekarang';
+            statusEl.classList.add(buka ? 'status-open' : 'status-closed');
+        }
+        cekStatusToko();
+
+        // ============ FORM ORDER (Checkout) ============
+        const form = document.getElementById('orderForm');
+        const modal = document.getElementById('invoiceModal');
+        const closeBtn = document.querySelector('.close-btn');
+        const confirmBtn = document.getElementById('confirmOrderBtn');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const cart = getCart();
+            if (cart.length === 0) {
+                alert('Keranjang kamu masih kosong. Yuk pilih dessert favoritmu dulu ♡');
+                return;
+            }
+
+            const nama = document.getElementById('inputNama').value;
+            const telp = document.getElementById('inputTelp').value;
+            const alamat = document.getElementById('inputAlamat').value;
+            const bayar = document.querySelector('input[name="bayar"]:checked').value;
+
+            document.getElementById('invNama').textContent = nama;
+            document.getElementById('invTelp').textContent = telp;
+            document.getElementById('invAlamat').textContent = alamat;
+            document.getElementById('invBayar').textContent = bayar;
+
+            const itemsList = document.getElementById('invItemsList');
+            itemsList.innerHTML = cart.map(item => `
+                <p><strong>${item.produk}</strong><br>
+                ${item.jumlah} pcs x ${formatRupiah(item.harga)} = ${formatRupiah(item.jumlah * item.harga)}</p>
+            `).join('');
+
+            const total = cart.reduce((sum, i) => sum + i.harga * i.jumlah, 0);
+            document.getElementById('invTotal').textContent = formatRupiah(total);
+
+            modal.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', () => modal.style.display = 'none');
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+        // Tutup modal dengan tombol Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+
+        confirmBtn.addEventListener('click', () => {
+            alert('Terima kasih! Pesanan Anda sedang diproses ♡');
+            modal.style.display = 'none';
+            form.reset();
+            saveCart([]); // kosongkan keranjang setelah order dikonfirmasi
+            renderCart();
+        });
+
+        renderCart();
+        renderWishlist();
+        syncWishlistButtons();
+    </script>
+</body>
+</html>
